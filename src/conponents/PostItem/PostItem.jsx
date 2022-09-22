@@ -48,7 +48,7 @@ const PostItem = ({post, ...props}) => {
 
 
             <div onClick={GoToPage} className={classes.post__content}>
-                <p><strong>{post.title.toString().substring(0, 20)}</strong></p>
+                <p><strong>{post.title}</strong></p>
                 <p>{post.price.toFixed(2).replace('.', ',')} PLN</p>
             </div>
 
