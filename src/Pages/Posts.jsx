@@ -167,7 +167,6 @@ function Posts() {
 
 
                 <Button onClick={TextFunction}>Console.log</Button>
-                <Button onClick={() => setModalvisible(true)}>Add post</Button>
 
                 <hr/>
 

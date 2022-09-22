@@ -1,12 +1,13 @@
 import React, {useContext} from 'react';
 import {PostContext} from "../../Pages/Posts";
+import classes from './SortPosts.module.css'
 
 const SortPosts = ({options,default_value,value,filter}) => {
 
     const {setFilter} = useContext(PostContext);
 
     return (
-        <select value={value} onChange={e => setFilter({...filter,sort:e.target.value})}>
+        <select className={classes.sort_select} value={value} onChange={e => setFilter({...filter,sort:e.target.value})}>
             <option disabled value={''}>{default_value}</option>
             {options.map((element) =>
                 <option value={element.value} key={element.value} >

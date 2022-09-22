@@ -23,7 +23,7 @@ const PostList = ({posts, title,delete_post}) => {
                 {posts.map( (post,index) =>
                     <CSSTransition
                         key={post.id}
-                        timeout={500}
+                        timeout={300}
                         classNames="post"
                     >
                     <PostItem delete_post={delete_post}  post={post} key={post.id} number={index+1} />
