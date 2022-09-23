@@ -68,7 +68,7 @@ const Navigation = () => {
         <div className={navClasses}>
             <div className={classes.link_container}>
                 <Link to='/about'>About</Link>
-                <Link to='/posts'>Posts</Link>
+                <Link to='/posts'>Products</Link>
                 <div onMouseEnter={() => seTisHoverCartButton(true)}
                      onMouseLeave={() => seTisHoverCartButton(false)}
                      className={classes.cartButton_container}>

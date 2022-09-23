@@ -16,9 +16,6 @@ const PostItem = ({post, ...props}) => {
     const {setModalvisible, modalvisible, setIdproductClicked, idproductClicked} = useContext(PostContext);
 
 
-    const GoToPage = () => {
-        navigate(`/posts/${post.id}`)
-    }
 
     const CalcTimeToRead = (readPerMin) => {
 
@@ -45,9 +42,7 @@ const PostItem = ({post, ...props}) => {
                     <img  src={post.imageLink}/>
                 </div>
 
-
-
-            <div onClick={GoToPage} className={classes.post__content}>
+            <div className={classes.post__content}>
                 <p><strong>{post.title}</strong></p>
                 <p>{post.price.toFixed(2).replace('.', ',')} PLN</p>
             </div>

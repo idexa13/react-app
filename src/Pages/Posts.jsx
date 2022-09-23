@@ -174,7 +174,7 @@ function Posts() {
                 {isPostLoaded
                     ? <div>
                         <PostList delete_post={DeletePost} posts={sortedList} key={posts.id}
-                                  title="Posts list"/>
+                                  title="Products list"/>
                         <Pagination pagesCountArr={pagesCountArr} actualPage={actualPage}
                                     setActualPage={setActualPage}/>
                     </div>

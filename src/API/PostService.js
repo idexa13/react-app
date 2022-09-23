@@ -149,74 +149,6 @@ export const ItemsData = [
     },
     {
         id: uuid4(),
-        title: "PLATFORM ANKLE BOOTS",
-        imageLink: "https://storage.googleapis.com/kraftdrew_marketplace_assets/28010.jpeg",
-        material: "100% polyester",
-        sex: "F",
-        price: 99.9,
-        size: [
-            {
-                name: 'XS',
-                value: 'xs',
-                isDisabled: false,
-            },
-            {
-                name: 'S',
-                value: 's',
-                isDisabled: false,
-            },
-            {
-                name: 'M',
-                value: 'm',
-                isDisabled: true,
-            },
-            {
-                name: 'L',
-                value: 'l',
-                isDisabled: false,
-            },
-            {
-                name: 'XL',
-                value: 'xl',
-                isDisabled: false,
-            }]
-    },
-    {
-        id: uuid4(),
-        title: "DENIM JACKET",
-        imageLink: "https://storage.googleapis.com/kraftdrew_marketplace_assets/43652.jpeg",
-        material: "100% cotton",
-        sex: "F",
-        price: 139,
-        size: [
-            {
-                name: 'XS',
-                value: 'xs',
-                isDisabled: false,
-            },
-            {
-                name: 'S',
-                value: 's',
-                isDisabled: false,
-            },
-            {
-                name: 'M',
-                value: 'm',
-                isDisabled: false,
-            },
-            {
-                name: 'L',
-                value: 'l',
-                isDisabled: false,
-            },
-            {
-                name: 'XL',
-                value: 'xl',
-                isDisabled: false,
-            }]
-    },
-    {
-        id: uuid4(),
         title: "BASIC HOODIE",
         imageLink: "https://storage.googleapis.com/kraftdrew_marketplace_assets/07613.jpeg",
         material: "64% polyester · 36% cotton",
@@ -310,6 +242,40 @@ export const ItemsData = [
                 name: 'L',
                 value: 'l',
                 isDisabled: true,
+            },
+            {
+                name: 'XL',
+                value: 'xl',
+                isDisabled: false,
+            }]
+    },
+    {
+        id: uuid4(),
+        title: "PLATFORM ANKLE BOOTS",
+        imageLink: "https://storage.googleapis.com/kraftdrew_marketplace_assets/28010.jpeg",
+        material: "100% polyester",
+        sex: "F",
+        price: 99.9,
+        size: [
+            {
+                name: 'XS',
+                value: 'xs',
+                isDisabled: false,
+            },
+            {
+                name: 'S',
+                value: 's',
+                isDisabled: false,
+            },
+            {
+                name: 'M',
+                value: 'm',
+                isDisabled: true,
+            },
+            {
+                name: 'L',
+                value: 'l',
+                isDisabled: false,
             },
             {
                 name: 'XL',
@@ -419,6 +385,40 @@ export const ItemsData = [
                 isDisabled: false,
             }]
     },
+    {
+        id: uuid4(),
+        title: "DENIM JACKET",
+        imageLink: "https://storage.googleapis.com/kraftdrew_marketplace_assets/43652.jpeg",
+        material: "100% cotton",
+        sex: "F",
+        price: 139,
+        size: [
+            {
+                name: 'XS',
+                value: 'xs',
+                isDisabled: false,
+            },
+            {
+                name: 'S',
+                value: 's',
+                isDisabled: false,
+            },
+            {
+                name: 'M',
+                value: 'm',
+                isDisabled: false,
+            },
+            {
+                name: 'L',
+                value: 'l',
+                isDisabled: false,
+            },
+            {
+                name: 'XL',
+                value: 'xl',
+                isDisabled: false,
+            }]
+    }
 ]
 
 
