@@ -9,7 +9,7 @@ const Filter = ({filter}) => {
             <Search placeholder={"Search"} filter={filter} value={filter.query} />
             <SortProducts default_value={'Sort'}
                           options={[{value: 'title', text: 'Sort by title'},
-                            {value: 'body', text: 'Sort by body'}
+                            {value: 'price', text: 'Sort by price'}
                         ]}
                           value={filter.sort}
                           filter={filter}

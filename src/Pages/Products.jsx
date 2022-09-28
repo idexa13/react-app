@@ -121,10 +121,7 @@ function Products() {
                     <ProductInfo post={idproductClicked}/>
                 </MyModal>
 
-
                 <Button onClick={TextFunction}>Console.log</Button>
-
-
                 <hr/>
 
                 <Filter filter={filter}/>

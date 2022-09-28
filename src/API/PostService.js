@@ -6,7 +6,7 @@ export const ItemsData = [
 
     {
         id: uuid4(),
-        title: "PIKOWANA KURTKA Z KAPTUREM",
+        title: "no KURTKA Z KAPTUREM",
         imageLink: "https://storage.googleapis.com/kraftdrew_marketplace_assets/14024.jpeg",
         material: "100% poliester",
         sex: "M",
