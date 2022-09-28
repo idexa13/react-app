@@ -168,6 +168,7 @@ function Posts() {
 
                 <Button onClick={TextFunction}>Console.log</Button>
 
+                
                 <hr/>
 
                 <Filter filter={filter}/>

@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-            You are pidor!!!
+            This is web app !!!
         </div>
     );
 };
