@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import {PostContext} from "../../Pages/Posts";
-import classes from './SortPosts.module.css'
+import {PostContext} from "../../Pages/Products";
+import classes from './SortProducts.module.css'
 
-const SortPosts = ({options,default_value,value,filter}) => {
+const SortProducts = ({options,default_value,value,filter}) => {
 
     const {setFilter} = useContext(PostContext);
 
@@ -18,4 +18,4 @@ const SortPosts = ({options,default_value,value,filter}) => {
     );
 };
 
-export default SortPosts;
+export default SortProducts;

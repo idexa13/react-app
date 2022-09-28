@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from "../../Pages/styles_pages/cart.module.css";
-import Button from "../Button/button";
 
 const CartItem = ({item, RemoveFromCart}) => {
     return (

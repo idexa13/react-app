@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import classes from './ProductInfo.module.css'
-import {PostContext} from "../../Pages/Posts";
+import {PostContext} from "../../Pages/Products";
 import Button from "../Button/button";
 import {v4 as uuid4} from 'uuid'
 

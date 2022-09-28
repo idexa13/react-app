@@ -1,14 +1,13 @@
-import React, {useContext, useEffect, useMemo, useRef, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "../styles/App.css"
-import PostList from "../conponents/PostList/PostList";
-import AddPostItem from "../conponents/AddPostItem/AddPostItem";
+import ProductList from "../conponents/ProductList/ProductList";
 import Button from "../conponents/Button/button";
 import Filter from "../conponents/Filter_component/filter";
 import {UseFilteredPosts} from '../hooks/useSort'
 
 import {CountPages} from '../utils/CountPages'
 import Pagination from "../conponents/Pagination/pagination";
-import PostService, {ItemsData} from "../API/PostService";
+import {ItemsData} from "../API/PostService";
 import MyModal from "../conponents/MyModal/MyModal";
 import ProductInfo from "../conponents/ProductInfo/ProductInfo";
 import {CartContext} from "../App";
@@ -17,7 +16,7 @@ import {v4 as uuid4} from 'uuid' ;
 
 export const PostContext = React.createContext('')
 
-function Posts() {
+function Products() {
 
 
     const [posts, setPosts] = useState([]);
@@ -45,21 +44,16 @@ function Posts() {
     const pagesCountArr = []
 
 
-    const AddPost = (newPost) => {
-        setPosts([...posts, newPost])
-        setModalvisible(false)
-    };
-
-    const CalculateContent = (posts,limit,page) => {
+    const CalculateContent = (posts, limit, page) => {
 
         if (page === 1) {
-            posts.slice(0,limit)
+            posts.slice(0, limit)
         }
 
-        const start =  limit*page - limit
-        const end = limit*page ;
+        const start = limit * page - limit
+        const end = limit * page;
 
-        return posts.slice(start,end)
+        return posts.slice(start, end)
 
 
     }
@@ -69,54 +63,16 @@ function Posts() {
 
         setIsPostLoaded(false)
 
-
-
-
-        // const ownPosts = PostService.GetOwnPosts()
-        // const response = await PostService.getAll(postsLimit, actualPage)
-
-        // const responseWithImage = response.data.map(element => {
-        //     return {
-        //         ...element,
-        //         imageLink: postImage,
-        //         isFeatured: false,
-        //         price: 79.90,
-        //         size,
-        //         material: '100% cotton'
-        //     }
-        // })
         const response1 = ItemsData
         const response2 = response1.map((element) => {
                 return {...element, id: uuid4()}
             }
         )
-        const response = [...response1,...response2]
+        const response = [...response1, ...response2]
 
-        const result = CalculateContent(response,postsLimit,actualPage)
+        const result = CalculateContent(response, postsLimit, actualPage)
 
         setPosts(result)
-        // // only featured posts
-        // if (ownPosts.length >= responseWithImage.length) {
-        //
-        //     setPosts(ownPosts)
-        // }
-        // // featured + other posts
-        // else if (ownPosts.length < responseWithImage.length) {
-        //     const normalPostsLeft = responseWithImage.length - ownPosts.length;
-        //     const result = [];
-        //     for (let i = 0; i < normalPostsLeft; i++) {
-        //         result.push(responseWithImage[i])
-        //     }
-        //     setPosts([...ownPosts, ...result])
-        // }
-        //
-        // // no featured posts
-        // else if (ownPosts.length === 0) {
-        //     setPosts(responseWithImage)
-        // } else {
-        //     throw new Error('posts merge error')
-        // }
-
         setIsPostLoaded(true)
         const totalCount = Object.keys(response).length
         setPagesCount(CountPages(totalCount, postsLimit))
@@ -168,14 +124,14 @@ function Posts() {
 
                 <Button onClick={TextFunction}>Console.log</Button>
 
-                
+
                 <hr/>
 
                 <Filter filter={filter}/>
                 {isPostLoaded
                     ? <div>
-                        <PostList delete_post={DeletePost} posts={sortedList} key={posts.id}
-                                  title="Products list"/>
+                        <ProductList delete_post={DeletePost} posts={sortedList} key={posts.id}
+                                     title="Products list"/>
                         <Pagination pagesCountArr={pagesCountArr} actualPage={actualPage}
                                     setActualPage={setActualPage}/>
                     </div>
@@ -189,4 +145,4 @@ function Posts() {
     );
 }
 
-export default Posts;
+export default Products;

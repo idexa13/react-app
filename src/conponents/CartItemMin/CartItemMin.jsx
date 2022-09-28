@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from "./CartItemMin.module.css";
-import Button from "../Button/button";
 
 const CartItemMin = ({item, RemoveFromCart}) => {
     return (

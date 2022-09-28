@@ -1,12 +1,11 @@
-import React,{useContext} from 'react';
-import PostItem from "../PostItem/PostItem";
+import React from 'react';
+import ProductItem from "../ProductItem/ProductItem";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import classes from './Postlist.module.css'
-import MyModal from "../MyModal/MyModal";
-import {PostContext} from "../../Pages/Posts";
 
 
-const PostList = ({posts, title,delete_post}) => {
+
+const ProductList = ({posts, title,delete_post}) => {
 
     if(!posts.length) {
       return  <h1 style={{textAlign: "center"}}>Posts not found</h1>
@@ -26,7 +25,7 @@ const PostList = ({posts, title,delete_post}) => {
                         timeout={300}
                         classNames="post"
                     >
-                    <PostItem delete_post={delete_post}  post={post} key={post.id} number={index+1} />
+                    <ProductItem delete_post={delete_post}  post={post} key={post.id} number={index+1} />
                     </CSSTransition>
                 )}
             </TransitionGroup>
@@ -35,4 +34,4 @@ const PostList = ({posts, title,delete_post}) => {
     );
 };
 
-export default PostList;
+export default ProductList;

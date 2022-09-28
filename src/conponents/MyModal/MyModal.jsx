@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import cl from '../MyModal/mymodal.module.css'
 import close_img from '../../assets/close_button.png'
 
-import {PostContext} from "../../Pages/Posts";
+import {PostContext} from "../../Pages/Products";
 
 const MyModal = ({children, setModalvisible, modalvisible}) => {
 
