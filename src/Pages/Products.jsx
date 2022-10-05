@@ -6,12 +6,13 @@ import Filter from "../conponents/Filter_component/filter";
 import {UseFilteredPosts} from '../hooks/useSort'
 
 import {CountPages} from '../utils/CountPages'
-import Pagination from "../conponents/Pagination/pagination";
+// import Pagination from "../conponents/Pagination/pagination";
 import {ItemsData} from "../API/PostService";
 import MyModal from "../conponents/MyModal/MyModal";
 import ProductInfo from "../conponents/ProductInfo/ProductInfo";
 import {CartContext} from "../App";
 import {v4 as uuid4} from 'uuid' ;
+import Pagination from '@mui/material/Pagination'
 
 
 export const PostContext = React.createContext('')
@@ -97,7 +98,7 @@ function Products() {
     };
 
     const TextFunction = () => {
-        console.log(sortedList);
+        console.log(pagesCount);
     }
 
     return (
@@ -129,8 +130,8 @@ function Products() {
                     ? <div>
                         <ProductList delete_post={DeletePost} posts={sortedList} key={posts.id}
                                      title="Products list"/>
-                        <Pagination pagesCountArr={pagesCountArr} actualPage={actualPage}
-                                    setActualPage={setActualPage}/>
+                        <Pagination count={pagesCountć} page={actualPage} variant="outlined" onChange={(e,value) => setActualPage(value) } />
+
                     </div>
 
                     : <h1 style={{textAlign: 'center'}}>Is loading</h1>

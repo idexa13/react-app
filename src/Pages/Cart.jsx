@@ -13,9 +13,6 @@ const Cart = (props) => {
     const totalCart = (cartItems.reduce((a, b) => a + b.price, 0)).toFixed(2).replace('.', ',')
 
 
-
-
-
     return (
         <div className={classes.cartItemsPage}>
             <div className={classes.cartItemsContainer}>
